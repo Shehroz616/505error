@@ -24,6 +24,10 @@
 body{
     background-color: black;
 }
+p{
+    font-size: 1.25em;
+    color: #EAEAEA;
+}
 header{
     background-color: var(--secondry-color-2);
     padding: 10px 4.5em;
@@ -32,7 +36,7 @@ header{
 }
 main section{
     background-color: var(--primary-color);
-    padding: 3em 0;
+    padding: 3em 4.5em;
     margin-top: 4.5rem;
 }
 .logo{
@@ -114,6 +118,7 @@ main section{
     display: flex;
     align-items: center;
     margin: 0;
+    color: var(--primary-color);
 }
 .hero-catagories span{
     width: 1.5em;
@@ -130,6 +135,7 @@ main section{
 .hero-discription{
     font-size: 1.25em;
     margin: 0;
+    color: var(--primary-color);
 }
 .talk-btn{
     width: max-content;
@@ -244,9 +250,6 @@ main section{
 .fav-btn img{
     width: 100%;
 }
-.new-comic-chapters{
-    padding-inline: 4.5em;
-}
 .chapter-card{
     position: relative;
 }
@@ -267,6 +270,7 @@ main section{
 .chapter-card-footer p{
     color: white;
     margin: 0;
+    font-size: 1em;
 }
 .learn-more-btn{
     color: var(--selection-color);
@@ -289,6 +293,7 @@ footer{
 }
 footer p{
     font-size: 1.25em;
+    color: var(--primary-color);
 }
 footer ul{
     margin: 0;
@@ -482,6 +487,25 @@ footer a:hover{
     color: var(--secondry-color-2);
     font-size: 1.25em;
 }
+.welcome-heading{
+    color: white;
+    font-family: "bebas-neue";
+    font-size: 3.5em;
+}
+.about-img-circle{
+    background: linear-gradient(102deg, #FE70FF -7.54%, #C2A2F4 36.52%, #52FFDF 118.33%);
+    border-radius: 50%;
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    max-width: 525px;
+}
+.about-img-circle img{
+    height: 90%;
+}
 @media(max-width:1200px){
     body{
         font-size: 0.85rem;
@@ -490,6 +514,9 @@ footer a:hover{
 @media(max-width:992px){
     header {
         padding: 10px 2.5em;
+    }
+    main section{
+        padding: 2.5em;
     }
     .logo{
         width: 30%;
@@ -525,7 +552,5 @@ footer a:hover{
         height: 12px;
         width: 12px;
     }
-    .new-comic-chapters{
-        padding: 2.5em ;
-    }
+    
 }
