@@ -249,6 +249,20 @@ main section{
     border-radius: 4px;
     border: none;
     display: inline-block;
+    text-align: center;
+}
+.secondary-btn{
+    background: transparent;
+    padding: 0.75em 1.5em;
+    color: white;
+    font-family: "roboto-medium";
+    font-size: 1.25em;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    display: inline-block;
+    border: 1px solid white;
+    text-align: center;
 }
 .fav-btn{
     position: absolute;
@@ -916,6 +930,112 @@ footer a:hover{
     position: absolute;
     top: 5%;
     left: 7.5%;
+}
+.form-floating .form-control{
+    background: transparent;
+    color: var(--secondry-color-2);
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--secondry-color-2);
+    box-shadow: none;
+}
+.form-control::placeholder{
+    color: var(--secondry-color-2);
+}
+.form-control:-moz-placeholder{
+    color: var(--secondry-color-2);
+}
+.form-control::-moz-placeholder{
+    color: var(--secondry-color-2);
+}
+.form-control:-ms-input-placeholder{
+    color: var(--secondry-color-2);
+}
+.form-floating>label{
+    color: var(--secondry-color-2);
+}
+.form-floating>.form-control:focus~label{
+    color: var(--secondry-color-2);
+}
+.form-floating>.form-control-plaintext~label, 
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label,
+.form-floating>.form-select~label{
+    background: transparent;
+    color: var(--secondry-color-2);
+}
+.form-floating>.form-control-plaintext~label::after,
+.form-floating>.form-control:focus~label::after,
+.form-floating>.form-control:not(:placeholder-shown)~label::after,
+.form-floating>.form-select~label::after{
+    background: transparent;
+}
+.order-item img{
+    border-radius: 5px;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+.order-item h4{
+    color: var(--secondry-color);
+    font-family: "bebas-neue";
+    font-size: 1.5em;
+}
+.order-item span{
+    color: var(--secondry-color-2);
+    font-size: 1em;
+}
+.order-item .price{
+    color: var(--selection-color);
+    font-size: 1.5em;
+    font-family: "roboto-bold";
+    width: max-content;
+}
+.order-price-details>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.25em;
+}
+.order-price-details span{
+    color: var(--secondry-color-2);
+}
+.order-price-details span:first-child{
+    font-size: 1em;
+}
+.order-price-details span:last-child{
+    font-size: 1.5em;
+}
+.coupon-container{
+    display: flex;
+    align-items: center;
+    margin-block: 1em;
+}
+.coupon-container input{
+    width: 100%;
+    margin-right: 0.5em;
+    background: black;
+    color: var(--secondry-color-2);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 0.75em 1em;
+    font-size: 1em;
+}
+.coupon-container .primary-btn{
+    padding: 0.5em 1em;
+}
+.coupon-container input::placeholder{
+    color: #697077;
+}
+.coupon-container input:-moz-placeholder{
+    color: #697077;
+}
+.coupon-container input::-moz-placeholder{
+    color: #697077;
+}
+.coupon-container input:-ms-input-placeholder{
+    color: #697077;
 }
 @media(max-width:1200px){
     body{
