@@ -269,6 +269,8 @@ main section{
 }
 .chapter-card{
     position: relative;
+    display: block;
+    text-decoration: none;
 }
 .chapter-card>img{
     padding: 1em;
@@ -764,6 +766,64 @@ footer a:hover{
     font-family: "bebas-neue";
     color: white;
 }
+.top-pagination-barr{
+    display: flex;
+    justify-content: space-between;
+    background: var(--secondry-color-2);
+    padding: 0.25em 1em;
+    flex-wrap: wrap;
+}
+.top-pagination-barr>div{
+    width: 33.33%;
+}
+.page-controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chapter-name img{
+    transform: rotate(-90deg);
+}
+.page-controls button,
+.page-controls a{
+    border: none;
+    background: var(--primary-color);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    margin: 0 0.5em;
+}
+.page-controls button img,
+.page-controls a img{
+    filter: invert();
+}
+.page-controls button:first-child img,
+.page-controls a:first-child img{
+    transform: rotate(90deg);
+}
+.page-controls button:last-child img,
+.page-controls a:last-child img{
+    transform: rotate(-90deg);
+}
+.page-controls span{
+    font-family: "bebas-neue";
+    font-size: 1.25em;
+}
+.top-share-icons{
+    display: flex;
+    justify-content: flex-end;
+}
+.top-share-icons a{
+    margin: 0 0.5em;
+    padding: 0.5em;
+}
+.top-share-icons a img{
+    height: 100%;
+}
+.chapter-name{
+    display: flex;
+    align-items: center;
+}
 @media(max-width:1200px){
     body{
         font-size: 0.85rem;
@@ -809,6 +869,18 @@ footer a:hover{
     .hero-section .carousel-indicators [data-bs-target]{
         height: 12px;
         width: 12px;
+    }
+    .top-pagination-barr>div{
+        width: 100%;
+    }
+    .page-controls{
+        margin: 1em 0;
+    }
+    .chapter-name{
+        justify-content: center;
+    }
+    .top-share-icons{
+        justify-content: center;
     }
     
 }
