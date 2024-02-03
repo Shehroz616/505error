@@ -21,7 +21,7 @@
                 <img src="img/xmark-solid.svg" alt="">
             </button>
             <li>
-                <a href="about.html" class="active">
+                <a href="">
                     <img src="img/about-menu-icon.png" alt="">
                     About
                 </a>
@@ -99,8 +99,8 @@
                     <img src="img/xmark-solid.svg" alt="">
                 </button>
                 <ul class="login-btns">
-                    <li><a href="">Login</a></li>
-                    <li><a href="">SignUp</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">SignUp</a></li>
                 </ul>
                 <h2 class="footer-headings">Contacts</h2>
                 <a class="contact-links" href="tel:+2 316 1231 25 69">+2 316 1231 25 69</a> <br>
@@ -121,42 +121,49 @@
         <div class="menu-overlay"></div>
     </header>
     <main>
-        <section class="banner-section">
-            <h1>About</h1>
-            <ul class="breadcrums">
-                <li><a href="index.html">Home</a></li>
-                <li>-</li>
-                <li>About</li>
-            </ul>
-        </section>
-        <section>
-            <div class="container-fluid text-lg-start text-center">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <h1 class="welcome-heading">Welcome to 505Error - Where Stories Come to Life!</h1>
-                        <p>At 505Error, we transcend the conventional boundaries of a mere website; we stand as a dynamic gateway ushering you into a boundless realm of Manga and Webtoons. Our inception traces back to a collective ardor for immersive storytelling and a profound admiration for the intricate artistry that breathes life into these extraordinary mediums. Picture a space where narratives unfold like vivid tapestries, each stroke of creativity meticulously crafted to transport you to realms unknown</p>
-                    </div>
-                    <div class="col-lg-5 ms-auto">
-                        <div class="about-img-circle">
-                            <img src="img/about-img.svg" alt="">
+        <section class="px-3 py-0">
+            <div class="row">
+                <div class="col-lg-5 login-bg"></div>
+                <div class="col-lg-7 p-5 d-flex align-items-center">
+                    <form action="" class="w-100">
+                        <h2 class="section-heading-2 text-start">Sign Up</h2>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group mb-3">
+                                    <label for="f-name">First Name</label>
+                                    <input class="form-control" type="text" id="f-name" placeholder="Jon">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-3">
+                                    <label for="l-name">Last Name</label>
+                                    <input class="form-control" type="text" id="l-name" placeholder="Doe">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid mt-4 text-lg-start text-center">
-                <div class="row gy-3">
-                    <div class="col-lg-4">
-                        <h2 class="section-heading text-lg-start">Our Mission:</h2>
-                        <p>At the heart of 505Error is a commitment to unveil and celebrate the diverse narratives woven into the fabric of Manga and Webtoons. We believe in the power of storytelling to transport readers to worlds unknown, spark emotions, and forge connections across cultures.</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <h2 class="section-heading text-lg-start">Why '505Error'?</h2>
-                        <p>The name '505Error' embodies our belief that every creative endeavor involves a bit of trial and error. It symbolizes the courage to explore the unknown, learn from the unexpected, and ultimately, deliver a seamless and enriching experience for our users.</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <h2 class="section-heading text-lg-start">Join the Journey</h2>
-                        <p>Embark on this exciting journey with us at 505Error. Whether you're a seasoned Manga and Webtoon enthusiast or just discovering the magic of digital storytelling, we invite you to explore, engage, and be part of our ever-growing community.</p>
-                    </div>
+                        <div class="form-group mb-3">
+                            <label for="email">Email Address</label>
+                            <input class="form-control" type="password" id="email" placeholder="example@gmail.com">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="email">Password</label>
+                            <input class="form-control" id="email" type="text" placeholder="123465798@">
+                            <button type="button" class="eye-btn"><img src="img/eye-fill.svg" alt=""></button>
+                        </div>
+                        <small class="must">It must be a combination of minimum 8 letters, numbers, and symbols.</small>
+                        <div class="d-flex justify-content-between align-items-baseline mb-3">
+                            <div class="condition" bis_skin_checked="1">
+                                <input type="checkbox" class="form-check-input" name="" id="agree">
+                                <label for="agree">Remember me</label>
+                            </div>
+                            <a href="" class="forget-link">Forget Password?</a>
+                        </div>
+                        <button class="primary-btn w-100">Login <img src="img/arrow-right-line.svg" alt=""></button>
+                        <hr class="my-4">
+                        <div class="text-center">
+                            <a href="login.html" class="signup-link">Already have an account? Login</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -170,7 +177,7 @@
             <div class="col-lg-4 px-lg-5 col-md-6">
                 <h2 class="footer-headings">About Us</h2>
                 <p>505Error has all of the current manga
-                    and webtoon book series to take you 
+                    and webtoon book series to take you
                     back to your childhood.</p>
                 <div class="social-icons">
                     <a href="">
@@ -204,6 +211,25 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/menu.js"></script>
+
+    <script>
+        let eyeBtns = document.querySelectorAll(".eye-btn")
+
+        eyeBtns.forEach(eyeBtn => {
+            eyeBtn.addEventListener("click", () => {
+                let imgSrc = eyeBtn.firstElementChild.src
+                if (imgSrc.includes("img/eye-fill.svg")) {
+                    eyeBtn.firstElementChild.src = "img/eye-slash-fill.svg"
+                    eyeBtn.previousElementSibling.type = "text"
+                }
+                else {
+                    eyeBtn.firstElementChild.src = "img/eye-fill.svg"
+                    eyeBtn.previousElementSibling.type = "password"
+                    console.log(eyeBtn.firstElementChild.src)
+                }
+            })
+        });
+    </script>
 </body>
 
 </html>
