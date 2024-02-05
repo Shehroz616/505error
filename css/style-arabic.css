@@ -1,0 +1,41 @@
+.rtl *{
+    writing-mode: sideways-rl;
+    text-align: right;
+}
+.rtl .row{
+    flex-direction: row-reverse;
+}
+.rtl .primary-btn{
+    flex-direction: row-reverse;
+}
+.rtl .primary-btn img{
+    transform: rotate(180deg);
+}
+.rtl *{
+    flex-direction: row-reverse;
+}
+.rtl .talk-btn{
+    display: inline-flex;
+    flex-direction: row-reverse;
+}
+.rtl .talk-btn img{
+    transform: rotate(180deg);
+}
+.rtl .hero-section .carousel-indicators{
+    left: unset;
+    right: calc(100% + 0.5em);
+}
+.rtl .hero-section{
+    background: linear-gradient(-102deg, #FE70FF -7.54%, #C2A2F4 36.52%, #52FFDF 118.33%);
+}
+.rtl #lang-select{
+    margin-right: 0;
+    padding-right: 0;
+    margin-left: 1em;
+    padding-left: 1em;
+    background-position: left 0.25em center;
+}
+.rtl .rating img{
+    margin-right: 0;
+    margin-left: 0.5em;
+}

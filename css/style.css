@@ -273,8 +273,9 @@ main section{
     text-decoration: none;
     border-radius: 4px;
     border: none;
-    display: inline-block;
+    display: inline-flex;
     text-align: center;
+    align-items: center;
 }
 .secondary-btn{
     background: transparent;
@@ -1113,20 +1114,28 @@ footer a:hover{
     box-shadow: none;
     padding: 0.9em 1.25em;
 }
-.form-group input::placeholder{
+.form-group .form-select{
+    background-color: black;
+    font-size: 1.25em;
     color: var(--secondry-color-2);
+    border: none;
+    box-shadow: none;
+    padding: 0.9em 1.25em;
 }
-.form-group input:-moz-placeholder{
-    color: var(--secondry-color-2);
+.form-group .form-control::placeholder{
+    color: #697077;
 }
-.form-group input:-ms-input-placeholder{
-    color: var(--secondry-color-2);
+.form-group .form-control:-moz-placeholder{
+    color: #697077;
 }
-.form-group input::-moz-placeholder{
-    color: var(--secondry-color-2);
+.form-group .form-control:-ms-input-placeholder{
+    color: #697077;
 }
-.form-group input::-webkit-input-placeholder{
-    color: var(--secondry-color-2);
+.form-group .form-control::-moz-placeholder{
+    color: #697077;
+}
+.form-group .form-control::-webkit-input-placeholder{
+    color: #697077;
 }
 #faq{
     border-top: 1px solid var(--secondry-color-2);
@@ -1375,6 +1384,117 @@ footer a:hover{
 hr{
     color: var(--secondry-color-2);
     opacity: 1;
+}
+.upload-form{
+    background-color: black;
+    padding: 2.75em;
+    border-radius: 8px;
+}
+.upload-form .form-control{
+    background-color: var(--primary-color);
+}
+.upload-form .form-select{
+    background-color: var(--primary-color);
+}
+.upload-form .form-select option{
+    color: var(--secondry-color-2);
+}
+.upload-form .uploader-container{
+    width: auto;
+    align-items: flex-start;
+}
+.uploader-container small{
+    color: var(--secondry-color-2);
+    font-size: 0.75em;
+}
+.upload-form .uploader-container .uploader{
+    min-height: 10em;
+    border-radius: 8px;
+}
+.tags-container,
+.genres-container{
+    background: var(--primary-color);
+    font-size: 1.25em;
+    color: var(--secondry-color-2);
+    border: none;
+    box-shadow: none;
+    padding: 0.9em 1.25em;
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tags,
+.genres{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-right: 0.75em;
+}
+.tag,
+.genre{
+    background: var(--secondry-color);
+    border-radius: 4px;
+    padding: 0.5em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.tag img,
+.genre img{
+    width: 0.75em;
+    filter: invert();
+    margin-left: 0.5em;
+    cursor: pointer;
+}
+.tags-container .form-control,
+.genres-container .form-control{
+    padding: 0;
+    width: auto;
+    font-size: 1em;
+}
+.plan-box{
+    background: black;
+    border-radius: 8px;
+    padding: 2.5em 2em;
+}
+.plan-inside-box{
+    background: #252525;
+    border-radius: 8px;
+    margin: -2em -1.5em;
+    padding: 2em 1.5em;
+}
+.plan-heading{
+    color: var(--secondry-color);
+}
+.period{
+    color: var(--secondry-color-2);
+    font-size: 1em;
+    margin-left: 0.5em;
+}
+.plan-box p{
+    font-size: 1em;
+}
+.what-include{
+    margin-top: 3em;
+}
+.what-include ul{
+    margin: 0;
+    padding: 0;
+    margin-top: 1em;
+    padding-left: 1.5em;
+}
+.what-include li{
+    list-style-image: url("../img/marker.svg");
+    list-style-type: disc; 
+    color: var(--secondry-color-2);
+    font-size: 1em;
+    margin-bottom: 1.5em;
+}
+.what-include li:last-child{
+    margin: 0;
 }
 @media(max-width:1400px){
     .creator-dashboard{
