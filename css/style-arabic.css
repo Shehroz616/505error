@@ -1,23 +1,23 @@
 .rtl *{
-    writing-mode: sideways-rl;
+    direction: rtl;
     text-align: right;
 }
-.rtl .row{
+/* .rtl .row{
     flex-direction: row-reverse;
 }
 .rtl .primary-btn{
     flex-direction: row-reverse;
-}
+} */
 .rtl .primary-btn img{
     transform: rotate(180deg);
 }
-.rtl *{
+/* .rtl *{
     flex-direction: row-reverse;
-}
-.rtl .talk-btn{
+} */
+/* .rtl .talk-btn{
     display: inline-flex;
     flex-direction: row-reverse;
-}
+} */
 .rtl .talk-btn img{
     transform: rotate(180deg);
 }
@@ -38,4 +38,26 @@
 .rtl .rating img{
     margin-right: 0;
     margin-left: 0.5em;
+}
+.rtl .dashboard li a svg{
+    margin-right: 0;
+    margin-left: 0.5em;
+}
+.rtl .feilds{
+    margin-left: auto;
+}
+.rtl .book-box img{
+    margin-right: 0;
+    margin-left: 1em;
+}
+.rtl .upload-form .uploader-container{
+    align-items: flex-end;
+}
+.rtl .search-box button{
+    margin-right: 0;
+    margin-left: 10px;
+}
+.rtl .catagories-list {
+    list-style-position: inside;
+    padding: 0;
 }
